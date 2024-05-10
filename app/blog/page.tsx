@@ -1,7 +1,9 @@
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
+import { siteConfig } from "@/config/site";
 import { sortPosts } from "@/lib/utils";
+import { Metadata } from "next";
 
 const POSTS_PER_PAGE = 5;
 
@@ -10,6 +12,11 @@ interface BlogPageProps {
     page?: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: siteConfig.name + " @ blog",
+  description: "My thoughts on software development, productivity, and life.",
+};
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Number(searchParams.page) || 1;

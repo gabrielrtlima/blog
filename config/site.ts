@@ -6,6 +6,7 @@ export const siteConfig = {
     github: "https://github.com/gabrielrtlima",
     twitter: "https://twitter.com/bielrt1",
   },
+  author: "Gabriel Lima",
 };
 
 export type SiteConfig = typeof siteConfig;

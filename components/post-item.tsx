@@ -31,7 +31,7 @@ export function PostItem({ slug, title, description, date }: PostItemProps) {
           href={slug}
           className={cn(buttonVariants({ variant: "link" }), "py-0")}
         >
-          Read more
+          Ler artigo
         </Link>
       </div>
     </article>

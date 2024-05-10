@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "gabrielrtl",
-  url: "https://gabrielrtlima.dev",
+  name: "leirbag",
+  url: "https://leirbag.dev",
   description: "My personal blog about web development and programming.",
   links: {
     github: "https://github.com/gabrielrtlima",

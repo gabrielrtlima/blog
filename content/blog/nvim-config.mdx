@@ -1,0 +1,95 @@
+---
+title: NVIM Setup
+description: Minha configuração para utilizar o NeoVim.
+date: 2024-05-17
+published: true
+---
+
+Depois de semanas com o blog criado e sem ter ideia do que escrever, me esbarro com mais uma "polêmica" na bolha dev no twitter:
+
+> **[Por que usar NeoVim/Vim em 2024?](https://x.com/o_gabsferreira/status/1790925087438164477)**
+
+Ao ler os comentários percebi que muita gente não tem ideia do que é possível fazer com o NVIM e como ele pode ser mais fácil do que você pensa.
+Então, resolvi escrever um post mostrando como eu configuro o meu NVIM.
+
+Importante ressaltar que eu não sou um expert com 10 anos de experiência utilizando o Vim, mas comecei a usar há mais ou menos 1 ano e desde então tem sido a única 
+_**"IDE"**_ que utilizo.
+
+## lazyvim
+Eu utilizo o LazyVim que é um configuração inicial para o NVIM que já vem com alguns plugins instalados e configurados para facilitar a nossa vida.
+O LazyVim é uma mão na roda para quem está começando e não sabe como configurar, ele resolve um problema gigantesco que é a configuração inicial do NVIM para novatos.
+
+Para instalar o LazyVim recomendo a documentação oficial que é bem simples: [Documentação LazyVim](https://lazyvim.org/)
+
+## plugins
+Este post não é sobre como instalar/configurar plugins, mas sim mostrar quais plugins/configurações eu utilizo e para que eles servem. Todos os plugins contém uma documentação 
+ensinando a como instalar na sua página do github.
+
+### Começando pelos amados temas (um dos motivos para eu utilizar o NVIM é a liberdade de costumização)
+Atualmente eu alterno entre _quatro_ temas:
+- [gruvbox-material](https://github.com/sainnhe/gruvbox-material/)
+- [tokyonight](https://github.com/folke/tokyonight.nvim/)
+- [catppuccin](https://github.com/catppuccin/nvim)
+- [vitesse](https://github.com/2nthony/vitesse.nvim)
+
+Neste momento em que escrevo este Post, estou utilizando o tema **tokyonight - storm** com transparência.
+![Meu NVIM com o tema tokyonight](https://i.imgur.com/Sd4K3Xd.png)
+
+### Os demais plugins
+Como são muitos plugins, vou listar todos e tentar dar uma breve explicação dos que considero mais importantes.
+
+- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - Abre a árvore de diretórios do projeto (barra lateral esquerda com os arquivos do projeto).
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Responsável por fazer o syntax highlight e outras coisas mais.
+- [cmp](https://github.com/hrsh7th/nvim-cmp) - Autocompletar
+- [telescope](https://github.com/nvim-telescope/telescope.nvim) - Pesquisa de arquivos, buffers, etc.
+- [bufferline](https://github.com/akinsho/bufferline.nvim) - Mostra os buffers abertos no topo do NVIM.
+- [lualine](https://github.com/nvim-lualine/lualine.nvim/) - Mostra informações do arquivo que está aberto na barra inferior (parecido com o que o tmux faz).
+- [navbuddy](https://github.com/SmiteshP/nvim-navbuddy)
+- [navic](https://github.com/SmiteshP/nvim-navic)
+- [noice](https://github.com/folke/noice.nvim) - Notificações no NVIM.
+- [mini-animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md)
+- [neoscroll](https://github.com/karb94/neoscroll.nvim)
+- [spectre](https://github.com/nvim-pack/nvim-spectre) - Find and replace.
+- [lorem](https://github.com/derektata/lorem.nvim) - Gera Lorem ipsum.
+- [flash](https://github.com/folke/flash.nvim) - Busca e destaca palavras.
+- [refactoring](https://github.com/ThePrimeagen/refactoring.nvim) - Refatoração de código.
+- [fidget](https://github.com/j-hui/fidget.nvim)
+- [breadcrumbs](https://github.com/LunarVim/breadcrumbs.nvim)
+- [copilot](https://github.com/zbirenbaum/copilot.lua) - Github copilot.
+- [git](https://github.com/lewis6991/gitsigns.nvim) - Integração com o git.
+
+
+### LSP
+Para LSP eu utilizo as configurações pré-definidas que o Lazy disponibiliza através do LazyExtras
+![LazyExtras](https://i.imgur.com/Q9DgJ0w.png)
+
+### Configurações do NeoVim
+Quando comecei a aprender é comum que a gente copie configurações realizadas por outras pessoas é normal e até aconselhável para que você
+consiga adaptar ao seu estilo, essas configurações que estou mostrando e irei mostrar tem grande influência de outras pessoas, como: 
+_**Devaslife**_, _**ThePrimeagen**_, _**TypeCraft**_ e bastante outros. 
+
+
+#### options.lua
+Esse arquivo em específico foi copiado de um setup que achei em um post no __x__ (falecido _twitter_) e adaptado para mim.
+
+Para não ocupar uma página gigantesca de código irei deixar o link referente a esse arquivo: [options.lua](https://github.com/gabrielrtlima/dotfiles/blob/main/nvim/lua/config/options.lua)
+
+![options.lua](https://i.imgur.com/USsddLe.png)
+
+#### keymaps.lua
+As keymaps segue a mesma ideia, a começo fui copiando e pegando de várias pessoas os atalhos que elas usavam e fui adaptando para o meu gosto.
+
+Para não ocupar uma página gigantesca de código irei deixar o link referente a esse arquivo: [keymaps.lua](https://github.com/gabrielrtlima/dotfiles/blob/main/nvim/lua/config/keymaps.lua)
+
+![keymaps.lua](https://i.imgur.com/ii1Oz0n.png)
+
+## como instalar/configurar o LazyVim?
+Caso você tenha curiosidade de como configurar o seu LazyVim existe alguns links que pode te ajudar a entender:
+- [Documentação LazyVim](https://lazyvim.org/)
+- [Vídeo do Thayto](https://www.youtube.com/watch?v=W7Jf4bnPcXY)
+- [Vídeo do devaslife](https://www.youtube.com/watch?v=fFHlfbKVi30)
+
+## links úteis
+- [Canal ThePrimeagen](https://www.youtube.com/@ThePrimeTimeagen)
+- [Canal typecraft](https://www.youtube.com/@typecraft_dev)
+- [Meus dotfiles](https://github.com/gabrielrtlima/dotfiles)
